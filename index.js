@@ -5,38 +5,24 @@ const { writeFile } = require('fs').promises;
 new CLI().run();
 
 const questions = () => {
-    return inquirer.prompt([
-        {
-            type: 'checkbox',
-            name: 'color',
-            message: 'What color should the SVG be?',
-            choices: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'White', 'Gray', 'Black', 'Brown'],
-        },
-        {
-            type: 'input',
-            name: 'text',
-            message: `What text should the SVG have?`,
-            validate: function (input) {
-              if (input.length === 3) {
-                return true; // Input is valid
-              } else {
-                return "Please enter exactly 3 characters."; // Input is invalid
-              }
-            }
-        },
-        {
-            type: 'checkbox',
-            name: 'color',
-            message: "What color should the SVG's text be?",
-            choices: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'White', 'Gray', 'Black', 'Brown'],
-        },
-    ])
+    
 };
 
 function init() {
     questions()
-        .then((answers) => writeFile('README.md', generateREADME(answers)))
-        .then(() => console.log('Successfully created an SVG.')
-        .then(() => console.log('Successfully created an SVG.')
+        // .then((answers) => writeFile('README.md', generateREADME(answers)))
+        .then((answers) => console.log(answers))
+        .then(() => console.log('Successfully created an SVG.'))
         .catch((err) => console.error(err));
 };
+
+// class SVG {
+//     constructor(color, shape, text, textColor) {
+//         this.color = color;
+//         this.shape = shape;
+//         this.text = text;
+//         this.textColor = textColor;
+//     }
+// }
+
+// init();
