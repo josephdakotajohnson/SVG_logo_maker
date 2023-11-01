@@ -47,7 +47,7 @@ I want to create an SVG logo generator.
 
 ## Video
 
- - (place video here in GitHub)
+ - https://drive.google.com/file/d/1LMKXnT4pL6syrMncIuAM5R5p6zNZrFdJ/view
 
 ## DeployedApp
 
